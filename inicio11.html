@@ -15,6 +15,7 @@
     </header>
     <main>
     <div id ="salida"></div>
+    <div id ="salida2"></div>
     <script>
         let dato1, dato2, num1, num2;
         dato1 = window.prompt("Introduce primer número ?", "0");
@@ -27,6 +28,9 @@
         document.write("El segundo numero es " + num2 );
         document.write("</br>");
         document.getElementById("salida").innerHTML = (`La multiplicación es ${resultado} `);
+        let resultado2 = num1 - num2;
+        document.write("</br>");
+        document.getElementById("salida2").innerHTML = (`La Resta es ${resultado2} `);
        </script>
     </main>
     <footer>Dennis Alvarez Rodriguez 2022@</footer>
