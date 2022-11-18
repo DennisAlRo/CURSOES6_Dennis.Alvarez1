@@ -14,6 +14,8 @@
         <h1>Ejercicio 11 JavaScript</h1>
     </header>
     <main>
+    <div id ="salida4"></div>
+    <div id ="salida3"></div>
     <div id ="salida"></div>
     <div id ="salida2"></div>
     <script>
@@ -23,9 +25,9 @@
         dato2 = window.prompt("Introduce segundo número ?", "0");
         num2 = parseInt(dato2);
         let resultado = num1 * num2;
-        document.write("El primer numero es " + num1 );
+        document.getElementById("salida4").innerHTML = (`El primer numero es ${num1} `);
         document.write("</br>");
-        document.write("El segundo numero es " + num2 );
+        document.getElementById("salida3").innerHTML = (`El segundo numero es ${num2} `);
         document.write("</br>");
         document.getElementById("salida").innerHTML = (`La multiplicación es ${resultado} `);
         let resultado2 = num1 - num2;
