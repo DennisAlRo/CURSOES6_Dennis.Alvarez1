@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="A1_Bolsa_16112022.css">
+<link rel="stylesheet" href="A1_MenuWeb_15112022.css">
+<link rel="icon" href="./IMG/favicon-removebg-preview.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="topnav">
+    <div id="myLinks">
+      <a href="./index.html">Inici</a>
+      <a href="./A1_QuienesSomos_16112022.html">Qui Som?</a>
+      <a href="./A1_Oferta_16112022.html">Oferta Gastronomica</a>
+      <a href="./A1_Bolsa_16112022.html">Bossa de treball</a>
+      <a href="./A1_Eventos_16112022.html">Events</a>
+      <a href="./A1_Galeria_30112022.html">Galeria</a>
+      <a href="./A1_Contacto_16112022.html">Contacte</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+  <header>
+    <div class="titulo">
+      <img src="./IMG/logo-amb-text.png" alt="">
+      <h1>Bossa de treball</h1>
+    </div>
+  </header>
+  <main>
+    <div class="Parrafo1Bolsa">
+      <p>T’agradaria conèixer el nostre projecte des de dins? Vols 
+      aprendre la nostra filosofia de treball en equip? Si vols 
+      saber com vivim la cuina o sentim la sala, no ho dubtis, completa el següent formulari.
+      Indica als comentaris si busques feina a l'equip de cuina, 
+      sala o pràctiques, si us plau.</p>
+    </div>
+    <div class="Formulario">
+      <form action="contacto.php" method="post" class="formulario" target="_blank">
+        <div class="cajaName">
+            <label for="nombre">Nom i Cognoms: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="Escriu el teu nom"> 
+        </div>
+        <div class="cajaMail">
+            <label for="email">Posa el teu correu:: </label>
+            <input type="email" name="mail" id="mail" placeholder="Correu electronic">
+        </div>
+        <div class="cajaTel">
+            <label for="telefono">Número de telèfon: </label>
+            <input type="tel" name="telefono" id="telefono" placeholder="Telèfon">
+        </div>
+        <div class="cajaEdad">
+            <label for="edad">Quants anys tens? </label>
+            <input type="number" name="edad" id="edad">
+        </div>
+        <div class="cajaArchivo">
+          <label for="archivo"> Inserta el CV:    </label>
+          <input type="file" name="archivo" id="archivo">
+        </div>
+        <div class="cajaFecha">
+          <label for="fecha">Posa la data</label>
+          <input type="datetime-local" name="fecha" id="fecha">
+        </div>
+        <div class="cajaLista">
+            <label for="lista">Valoració:  </label>
+            <select name="lista" id="lista">
+                <option value="muy bien">Molt bona</option>
+                <option value="bien">Bona</option>
+                <option value="regular">Regular</option>
+                <option value="mal">Dolenta</option>
+        </select>
+        </div>
+        <div class="cajaEnviar">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+    </div>
+
+    <table>
+      <caption>Hores de treball escola hosteleria</caption>
+      <tr>
+          <th>Hores</th>
+          <th>Dilluns</th>
+          <th>Dimarts</th>
+          <th>Dimecres</th>
+          <th>Dijous</th>
+          <th>Divendres</th>
+      </tr>
+      <tr>
+        <td>8:00</td>
+        <td>8:00</td>
+        <td>8:00</td>
+        <td>8:00</td>
+        <td>8:00</td>
+        <td>8:00</td>
+      </tr>
+      <tr>
+        <td>9:00</td>
+        <td>9:00</td>
+        <td>9:00</td>
+        <td>9:00</td>
+        <td>9:00</td>
+        <td>9:00</td>
+      </tr>
+      <tr>
+        <td>10:00</td>
+        <td>10:00</td>
+        <td>10:00</td>
+        <td>10:00</td>
+        <td>10:00</td>
+        <td>10:00</td>
+      </tr>
+      <tr>
+        <td>11:00</td>
+        <td>11:00</td>
+        <td>11:00</td>
+        <td>11:00</td>
+        <td>11:00</td>
+        <td>11:00</td>
+      </tr>
+      <tr>
+        <td>12:00</td>
+        <td>12:00</td>
+        <td>12:00</td>
+        <td>12:00</td>
+        <td>12:00</td>
+        <td>12:00</td>
+      </tr>
+      <tr>
+          <td>13:00</td>
+          <td>13:00</td>
+          <td>13:00</td>
+          <td>13:00</td>
+          <td>13:00</td>
+          <td>13:00</td>
+      </tr>
+  </table>
+
+  </main>
+  <footer>Dennis Alvarez Rodriguez @2022</footer>
+</body>
+</html>
