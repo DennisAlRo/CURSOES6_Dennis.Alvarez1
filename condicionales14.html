@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+ let mes, final;
+ mes = prompt("Dime el numero de un mes?", "0");
+ if (isNaN(mes)) {
+ final = "Error. No es un mes del año";
+ } 
+ else {
+ final = (mes < 18) ? "Demasiado joven" : "Mayor de edad";
+ }
+ document.write(final);
+</script>
+</head>
+</html> 
