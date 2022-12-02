@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+ let etapa,edad
+
+ edad = parseInt(prompt("Edad?", "0"));
+ if ((edad>=1)&&(edad<=120)){
+    if (edad>=18)
+    {
+        document.write(`<h3>Si tiene permiso de acceso </h3>`);
+    }else 
+    document.write(`<h3>No tiene permiso de acceso </h3>`);
+ }else{
+    document.write(`<h3>Lo siento no se permite a menores de 1 año ni mayores de 120 años</h3>`);
+}
+
+</script>
+</body>
+</html>
