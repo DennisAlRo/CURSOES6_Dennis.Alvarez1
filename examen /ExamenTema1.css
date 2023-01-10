@@ -1,0 +1,48 @@
+/*
+    Examen tema 1 Java scrypt
+    Dennis Alvarez Rodriguez
+    13 de diciembre de 2022
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+header{
+    background-color: aqua;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#salida{
+    text-align: center;
+    background-color:aquamarine ;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+}
+
+#salidas{
+    text-align: center;
+    background-color:cadetblue ;
+    margin: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+body{
+    background-color: azure;
+}
+
+#salida6{
+    color: rgba(201, 44, 44, 0.829);
+}
