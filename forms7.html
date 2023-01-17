@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></head>
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function convertir() {
+  var celsius = document.getElementById("celsius").value;
+  if (isNaN(celsius)) {
+    document.getElementById("resultado").innerHTML = "Por favor ingrese un número válido.";
+    return;
+  }
+  var fahrenheit = (celsius * 9/5) + 32;
+  fahrenheit = fahrenheit.toFixed(2);
+  document.getElementById("resultado").innerHTML = celsius + " grados Celsius son " + fahrenheit + " grados Fahrenheit.";
+}
+function clearForm() {
+  document.getElementById("celsius").value = "";
+  document.getElementById("resultado").innerHTML = "";
+}
+</script>
+</head>
+<body>
+    <form>
+        <label>Ingrese grados Celsius:</label>
+        <input type="text" id="celsius">
+        <button type="button" onclick="convertir()">Convertir</button>
+        <button type="button" onclick="clearForm()">Limpiar</button>
+      </form>
+      <p id="resultado"></p>
+      
+</form>
+</body>
+</html> 
