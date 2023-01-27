@@ -5,11 +5,32 @@
 <script>
  function calculaNota()
  {
-    
+    porcentaje1=parseFloat(document.fdatos.porcentaje1.value)
+    porcentaje2=parseFloat(document.fdatos.porcentaje2.value)
+    nota1=parseFloat(document.fdatos.nota1.value)
+    nota2=parseFloat(document.fdatos.nota2.value)
+    document.getElementById("salida").innerHTML=nota1*porcentaje1/100 + nota2*porcentaje2/100;
  }
- function calculaPorcentaje()
- {
+ function calculaPorcentaje1()
+ {   
+    if (parseFloat(document.fdatos.porcentaje1.value)< 0 || (parseFloat(document.fdatos.porcentaje1.value) > 100)){
+        document.getElementById("e_porcentaje1").innerHTML="Error al poner numero"
 
+    }else{
+        document.getElementById("e_porcentaje1").innerHTML=""
+        document.fdatos.porcentaje2.value=100- parseFloat(document.fdatos.porcentaje1.value)
+    }
+
+ }
+ function calculaPorcentaje2()
+ {
+    if (parseFloat(document.fdatos.porcentaje2.value)< 0 || (parseFloat(document.fdatos.porcentaje2.value) > 100)){
+        document.getElementById("e_porcentaje2").innerHTML="Error al poner numero"
+
+    }else{
+        document.getElementById("e_porcentaje2").innerHTML=""
+        document.fdatos.porcentaje1.value=100- parseFloat(document.fdatos.porcentaje2.value)
+    }
  }
  function evaluarNota1()
  {
@@ -36,10 +57,10 @@
 <body>
     <form name="fdatos">
         Nota1: <input type="number" size="4" name="nota1" onchange="evaluarNota1()"/> <span id="e_nota1"></span>
-        Porcentaje: <input type="number" size="4" name="porcentaje1"/>
+        Porcentaje: <input type="number" size="4" name="porcentaje1" onchange="calculaPorcentaje1()"/> <span id="e_porcentaje1"></span>
         Nota2: <input type="number" size="4" name="nota2" onchange="evaluarNota2()"/> <span id="e_nota2"></span>
-        Porcentaje: <input type="number" size="4" name="porcentaje2"/>
-        <input type="button" name="calcula" value="CALCULAR" onclick="calculaNota()">
+        Porcentaje: <input type="number" size="4" name="porcentaje2" onchange="calculaPorcentaje2()"/> <span id="e_porcentaje2"></span>
+        <input type="button" name="calcula" value="CALCULAR" onclick="calculaNota()"> <span id="salida"></span>
         <span id="nota"></span>
     </form>
 </body>
