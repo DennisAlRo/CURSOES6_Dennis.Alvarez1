@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>centro meteorologo madrid</title>
+    <link rel="stylesheet" href="./ExamenRecu.css">
+    <link rel="icon" href="./descarga.png"/>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Centro meteorologia</h1>
+        </header>
+    </div>
+    <div id ="salida"></div>
+    <div id="salidas">
+        <div id ="salida1"></div>
+        <div id ="salida2"></div>
+        <div id ="salida3"></div>
+        <div id ="salida4"></div>
+        <div id ="salida5"></div>
+        <div id ="salida6"></div>
+        <div id ="salida7"></div>
+        <div id ="salida8"></div>
+    </div>
+        <script>
+                let grupo, fecha1,fecha2,fecha3,fecha4,fecha5,fecha6,fecha7 ;
+                let tem1="",temp2="",tem3="",temp4="",tem5="",temp6="",temp7="";
+
+                grupo = parseInt(prompt("Cuantos dias has captado la meteorologia?", ""));
+                fecha1 = parseInt(prompt("Fecha dia 1?", ""));
+                temp1 = parseInt(prompt("Temperatura dia 1?", ""));
+                fecha2 = parseInt(prompt("Fecha dia 2?", ""));
+                temp2 = parseInt(prompt("Temperatura dia 2?", ""));
+                fecha3 = parseInt(prompt("Fecha dia 3?", ""));
+                temp3 = parseInt(prompt("Temperatura dia 3?", ""));
+                fecha4 = parseInt(prompt("Fecha dia 4?", ""));
+                temp4 = parseInt(prompt("Temperatura dia 4?", ""));
+                fecha5 = parseInt(prompt("Fecha dia 5?", ""));
+                temp5 = parseInt(prompt("Temperatura dia 5?", ""));
+                fecha6 = parseInt(prompt("Fecha dia 6?", ""));
+                temp6 = parseInt(prompt("Temperatura dia 6?", ""));
+                fecha7 = parseInt(prompt("Fecha dia 7?", ""));
+                temp7 = parseInt(prompt("Temperatura dia 7?", ""));
+                if (grupo >= "8")
+                    {
+                    document.write(`<h3>Lo siento los dias no pueden ser mayores a 7</h3>`);
+                    }
+                let sumatotal = temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7;
+                let resultado = sumatotal / grupo;
+                document.getElementById("salida").innerHTML = (`<h3> Temperatura media de los dias: ${resultado} </h3> `);
+                document.getElementById("salida1").innerHTML = (`<h3> Dias totales captados en meteorologia: ${grupo} </h3> `);
+                document.getElementById("salida2").innerHTML = (`<h> Dia 1: ${fecha1}  Temperatura: ${temp1}°C`);
+                document.getElementById("salida3").innerHTML = (`<h> Dia 2: ${fecha2}  Temperatura: ${temp2}°C`);               
+                document.getElementById("salida4").innerHTML = (`<h> Dia 3: ${fecha3}  Temperatura: ${temp4}°C`); 
+                document.getElementById("salida5").innerHTML = (`<h> Dia 4: ${fecha4}  Temperatura: ${temp4}°C`);  
+                document.getElementById("salida6").innerHTML = (`<h> Dia 5: ${fecha5}  Temperatura: ${temp5}°C`);  
+                document.getElementById("salida7").innerHTML = (`<h> Dia 6: ${fecha6}  Temperatura: ${temp6}°C`);  
+                document.getElementById("salida8").innerHTML = (`<h> Dia 1: ${fecha7}  Temperatura: ${temp7}°C`);        
+        </script>
+ 
+    </body>
+    </html>
