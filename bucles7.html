@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script>
+ let i,y,x;
+ function calcula()
+ {
+ for(i=1; i<=y; i++)
+ document.write('${x} x ${i} = ${x*i}')
+ }
+ </script>
+</head>
+<body>
+<form name="datos" action="Ejercicio.html" >
+
+ Num1:
+ <input type="text" size="20" name="x" />
+ <br>
+ Num2:
+ <input type="text" size="20" name="y" />
+ <br>
+<input type="button" name="B1" value="Calcula" onclick="calcula()" />
+</form>
+
+</body>
+</html> 
