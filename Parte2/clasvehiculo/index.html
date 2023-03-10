@@ -6,5 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <form>
+      <label>Ingrese la marca del vehiculo:</label>
+      <input type="text" id="marca">
+      <br>
+      <label>Ingrese el modelo del vehiculo:</label>
+      <input type="text" id="modelo">
+      <br>
+      <label>Ingrese el precio del vehiculo:</label>
+      <input type="text" id="precio">
+      <br>
+      <label>Ingrese los Km del vehiculo:</label>
+      <input type="text" id="km">
+      <br>
+      <button type="button" onclick="convertir()">Buscar</button>
+      <br>
+      <button type="button" onclick="clearForm()">Limpiar</button>
+    </form>
+    <script type="text/javascript">
+            let vehiculo = new Vehiculo('SEAT', 'IBIZA', 12000, 30000);
+            vehiculo.mostrarMarcaModelo();
+            vehiculo.sumaKm(100);
+            vehiculo.marca="AUDI"
+            console.log(vehiculo);
+    </script>
+  </body>
 </html>

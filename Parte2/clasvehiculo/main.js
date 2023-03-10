@@ -1,63 +1,57 @@
 class Vehiculo {
-    constructor(modelo, marca, precio, km) {
-      this._modelo = modelo;
-      this._marca = marca;
-      this._precio = precio;
-      this._km = km;
-    }
-  
-    get modelo() {
-      return this._modelo;
-    }
-  
-    set modelo(value) {
-      this._modelo = value;
-    }
-  
-    get marca() {
-      return this._marca;
-    }
-  
-    set marca(value) {
+  constructor(marca, modelo, precio, km) {
+    this._modelo = modelo;
+    this._marca = marca;
+    this._precio = precio;
+    this._km = km;
+  }
+
+  get modelo() {
+    return this._modelo;
+  }
+
+  set modelo(value) {
+    this._modelo = value;
+  }
+
+  get marca() {
+    return this._marca;
+  }
+
+  set marca(value) {
+    var marcas = ["SEAT", "MERCEDES", "AUDI", "OPEL", "FORD"];
+    if (marcas.includes(value.toUpperCase()))  
       this._marca = value;
-    }
-  
-    get precio() {
-      return this._precio;
-    }
-  
-    set precio(value) {
-      this._precio = value;
-    }
-  
-    get km() {
-      return this._km;
-    }
-  
-    set km(value) {
-      this._km = value;
-    }
-  
-    mostrarMarcaModelo() {
-      console.log(this.marca + ' ' + this.modelo);
-    }
-  
-    sumaKm(km) {
-      if (km >= 0) {
-        this._km += km;
-      }
+    else this._marca= "SIN DEFINIR"
+  }
+
+  get precio() {
+    return this._precio;
+  }
+
+  set precio(value) {
+    this._precio = value;
+  }
+
+  get km() {
+    return this._km;
+  }
+
+  set km(value) {
+    this._km = value;
+  }
+
+  mostrarMarcaModelo() {
+    console.log(this.marca + ' ' + this.modelo);
+  }
+
+  sumaKm(km) {
+    if (km >= 0) {
+      this.km += km;
     }
   }
-  
-  function init() {
-    let vehiculo = new Vehiculo('SEAT', 'IBIZA', 12000, 30000);
-  
-    vehiculo.mostrarMarcaModelo();
-  
-    vehiculo.sumaKm(100);
-  
-    console.log(vehiculo);
-  }
-  
-  window.onload = init;
-  
+}
+function clearForm() {
+  document.getElementById("modelo").value = "";
+  document.getElementById("resultado").innerHTML = "";
+}
